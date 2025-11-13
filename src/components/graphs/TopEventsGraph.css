@@ -1,0 +1,70 @@
+.word-cloud-container {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    gap: 8px 12px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    /* Center the word cloud */
+    text-align: center;
+    /* Custom scrollbar styling */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 255, 255, 0.5) rgba(0, 0, 0, 0.3);
+}
+
+.word-cloud-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.word-cloud-container::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+
+.word-cloud-container::-webkit-scrollbar-thumb {
+    background: rgba(0, 255, 255, 0.5);
+    border-radius: 4px;
+}
+
+.word-cloud-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 255, 255, 0.7);
+}
+
+.word-cloud-word {
+    cursor: pointer;
+    padding: 3px 6px;
+    margin: 1px 3px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 6px currentColor, 0 0 10px currentColor;
+    user-select: none;
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid transparent;
+    line-height: 1.1;
+    white-space: nowrap;
+    /* Add slight rotation for cloud effect */
+    transform-origin: center;
+}
+
+.word-cloud-word:hover {
+    transform: scale(1.15) !important;
+    background: rgba(0, 255, 255, 0.15);
+    border-color: currentColor;
+    box-shadow: 0 0 25px currentColor;
+    z-index: 10;
+    position: relative;
+}
+
+.word-cloud-word:active {
+    transform: scale(1.1);
+}

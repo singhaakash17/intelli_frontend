@@ -1,0 +1,230 @@
+.drilldown-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100000;
+    backdrop-filter: blur(3px);
+    pointer-events: auto;
+}
+
+.drilldown-modal-content {
+    background: #ffffff;
+    border: 1px solid #e1e8ed;
+    border-radius: 12px;
+    width: 95%;
+    max-width: 1600px;
+    max-height: 95vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    position: relative;
+    margin: auto;
+    min-height: 400px;
+    box-sizing: border-box;
+    pointer-events: auto;
+    outline: none;
+}
+
+.drilldown-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    border-bottom: 1px solid #e1e8ed;
+    background: #f7fafc;
+}
+
+.drilldown-modal-header h2 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.drilldown-modal-close {
+    background: #f7fafc;
+    border: 1px solid #cbd5e0;
+    color: #718096;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.drilldown-modal-close:hover {
+    background: #edf2f7;
+    border-color: #e53e3e;
+    color: #e53e3e;
+}
+
+.drilldown-modal-body {
+    padding: 20px 30px;
+    overflow-y: auto;
+    flex: 1;
+    min-height: 200px;
+    box-sizing: border-box;
+    background: #fafbfc;
+}
+
+.drilldown-summary {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f7fafc;
+    border: 1px solid #e1e8ed;
+    border-radius: 10px;
+}
+
+.drilldown-summary h3 {
+    margin: 0 0 15px 0;
+    color: #2c3e50;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.summary-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.summary-label {
+    color: #718096;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.summary-value {
+    color: #4a90e2;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.drilldown-table-container {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+.drilldown-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    border: 1px solid #e1e8ed;
+    border-radius: 8px;
+}
+
+.drilldown-table thead {
+    background: #f7fafc;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.drilldown-table th {
+    padding: 12px 15px;
+    text-align: left;
+    color: #4a5568;
+    border-bottom: 2px solid #e1e8ed;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+.drilldown-table td {
+    padding: 12px 15px;
+    color: #2c3e50;
+    border-bottom: 1px solid #e1e8ed;
+}
+
+.drilldown-table tbody tr:hover {
+    background: #f7fafc;
+    transform: none;
+}
+
+.drilldown-btn {
+    background: #4a90e2;
+    border: 1px solid #4a90e2;
+    color: #ffffff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    min-width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.drilldown-btn:hover {
+    background: #357abd;
+    box-shadow: 0 2px 6px rgba(74, 144, 226, 0.3);
+    transform: none;
+}
+
+.drilldown-modal-footer {
+    padding: 20px 30px;
+    border-top: 1px solid #e1e8ed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f7fafc;
+}
+
+.drilldown-modal-btn {
+    background: #4a90e2;
+    border: none;
+    color: #ffffff;
+    padding: 12px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.drilldown-modal-btn:hover {
+    background: #357abd;
+    box-shadow: 0 2px 6px rgba(74, 144, 226, 0.3);
+    transform: none;
+}
+
+.drilldown-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #718096;
+    font-size: 0.9rem;
+}
+
+.breadcrumb-arrow {
+    color: #4a90e2;
+    font-weight: 600;
+}
+
+.breadcrumb-level {
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}

@@ -1,0 +1,40 @@
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+
+// https://vitejs.dev/config/
+export default defineConfig({
+    plugins: [
+        react({
+            include: '**/*.{jsx,js}',
+        }),
+    ],
+    server: {
+        port: 3000,
+        host: true,
+        proxy: {
+            '/api': {
+                target: 'http://127.0.0.1:8000',
+                changeOrigin: true,
+            },
+        },
+    },
+    build: {
+        outDir: 'dist',
+        sourcemap: false,
+        emptyOutDir: true,
+        rollupOptions: {
+            output: {
+                manualChunks: {
+                    'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+                    'chart-vendor': ['recharts'],
+                    'markdown-vendor': ['react-markdown', 'remark-gfm'],
+                },
+            },
+        },
+        chunkSizeWarningLimit: 1000,
+    },
+    resolve: {
+        extensions: ['.jsx', '.js', '.json'],
+    },
+});
+

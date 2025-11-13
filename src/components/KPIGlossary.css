@@ -1,0 +1,236 @@
+.kpi-glossary-container {
+    min-height: 100vh;
+    width: 100%;
+    background: #f5f7fa;
+    color: #2c3e50;
+    padding: 20px;
+}
+
+.kpi-glossary-header {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.back-button {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #f7fafc;
+    border: 1px solid #cbd5e0;
+    color: #4a90e2;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.back-button:hover {
+    background: #edf2f7;
+    border-color: #4a90e2;
+    transform: translateX(-5px);
+    box-shadow: 0 2px 6px rgba(74, 144, 226, 0.15);
+}
+
+.glossary-title {
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin: 20px 0 10px 0;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.glossary-icon {
+    font-size: 3rem;
+    color: #4a90e2;
+}
+
+.glossary-subtitle {
+    color: #718096;
+    font-size: 1.1rem;
+    margin: 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.glossary-filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.category-filter {
+    background: #ffffff;
+    border: 1px solid #cbd5e0;
+    color: #4a5568;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+}
+
+.category-filter:hover {
+    border-color: #4a90e2;
+    background: #f7fafc;
+    transform: translateY(-2px);
+}
+
+.category-filter.active {
+    background: #4a90e2;
+    border-color: #4a90e2;
+    color: #ffffff;
+    box-shadow: 0 2px 6px rgba(74, 144, 226, 0.3);
+}
+
+.kpi-glossary-table-wrapper {
+    overflow-x: auto;
+    background: #ffffff;
+    border: 1px solid #e1e8ed;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.kpi-glossary-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1000px;
+}
+
+.kpi-glossary-table thead {
+    background: #f7fafc;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.kpi-glossary-table th {
+    padding: 16px 20px;
+    text-align: left;
+    color: #2c3e50;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #e1e8ed;
+    white-space: nowrap;
+}
+
+.kpi-glossary-table td {
+    padding: 16px 20px;
+    color: #4a5568;
+    border-bottom: 1px solid #e1e8ed;
+    vertical-align: top;
+}
+
+.kpi-glossary-table tbody tr:hover {
+    background: #f7fafc;
+}
+
+.kpi-glossary-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.kpi-name-cell {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.kpi-name-cell strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #2c3e50;
+}
+
+.kpi-unit-badge {
+    display: inline-block;
+    background: #edf6ff;
+    color: #4a90e2;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.kpi-category-cell {
+    color: #4a90e2;
+    font-weight: 500;
+}
+
+.kpi-description-cell {
+    color: #4a5568;
+    line-height: 1.6;
+    max-width: 400px;
+}
+
+.kpi-formula-cell code {
+    background: #f7fafc;
+    color: #4a90e2;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    border: 1px solid #e1e8ed;
+    display: inline-block;
+}
+
+.kpi-interpretation-cell {
+    color: #4a5568;
+    line-height: 1.6;
+    max-width: 400px;
+}
+
+.no-results-cell {
+    text-align: center;
+    padding: 40px;
+    color: #718096;
+    font-size: 1rem;
+}
+
+@media (max-width: 1200px) {
+    .kpi-glossary-grid {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .kpi-glossary-container {
+        padding: 15px;
+    }
+
+    .kpi-glossary-table-wrapper {
+        border-radius: 8px;
+    }
+
+    .kpi-glossary-table th,
+    .kpi-glossary-table td {
+        padding: 12px 15px;
+        font-size: 0.85rem;
+    }
+
+    .kpi-description-cell,
+    .kpi-interpretation-cell {
+        max-width: 250px;
+    }
+
+    .glossary-filters {
+        gap: 10px;
+    }
+
+    .category-filter {
+        padding: 8px 15px;
+        font-size: 0.85rem;
+    }
+}

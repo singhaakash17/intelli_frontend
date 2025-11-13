@@ -1,0 +1,171 @@
+.App {
+  min-height: 100vh;
+  position: relative;
+}
+
+.main-content {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.app-header {
+  text-align: center;
+  padding: 40px 20px;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+.app-header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+.content-container {
+  display: grid;
+  gap: 20px;
+}
+
+.info-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e1e8ed;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.info-card h2 {
+  color: #4a90e2;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+.info-card p {
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.feature-list {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e1e8ed;
+  margin-top: 20px;
+}
+
+.feature-list h3 {
+  color: #4a90e2;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.feature-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.feature-list li {
+  padding: 12px 20px;
+  margin: 8px 0;
+  background: #f7fafc;
+  border-radius: 8px;
+  border-left: 4px solid #4a90e2;
+  color: #2c3e50;
+  font-size: 1.05rem;
+  transition: all 0.2s ease;
+}
+
+.feature-list li:hover {
+  background: #edf2f7;
+  transform: translateX(5px);
+}
+
+.cta-section {
+  background: #4a90e2;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.2);
+  text-align: center;
+  margin-top: 20px;
+}
+
+.cta-text {
+  color: white;
+  font-size: 1.3rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Chatbot Toggle Button */
+.chatbot-toggle-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #4a90e2;
+  color: #ffffff;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+  transition: all 0.3s ease;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chatbot-toggle-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(74, 144, 226, 0.4);
+}
+
+.chatbot-toggle-btn.active {
+  background: #e53e3e;
+  box-shadow: 0 4px 12px rgba(229, 62, 62, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-header h1 {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .info-card h2 {
+    font-size: 1.4rem;
+  }
+
+  .info-card p {
+    font-size: 1rem;
+  }
+
+  .chatbot-toggle-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
